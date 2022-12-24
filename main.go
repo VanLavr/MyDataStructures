@@ -4,7 +4,6 @@ import "fmt"
 
 func main() {
 	var stc Stack
-	//fmt.Println(stc)
 
 	for i := 0; i < 10; i++ {
 		stc.push(i)
