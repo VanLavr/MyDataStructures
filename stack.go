@@ -1,6 +1,7 @@
 /*
 FOR KOLYA
-interprite this structure and functions like kinda class with two methods 
+interprite this structure and functions like kinda class with two methods
+waiting for u)
 */
 
 package main
