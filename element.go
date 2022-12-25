@@ -5,3 +5,5 @@ type Element struct {
 	pointerOnThisElement *Element // this field of elemnet contains pointer on itself (self adderess)
 	pointerOnPtiviousElement *Element // this field points on privious element in stack
 }
+
+// changes in new branch...
