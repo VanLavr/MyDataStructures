@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
+	
+	// stack check
 	var stc Stack
 	fmt.Print("capacity -> ")
 	fmt.Println(stc.capacity)
@@ -11,7 +13,6 @@ func main() {
 
 	for i := 0; i < 16; i++ {
 		stc.push(i)
-		//fmt.Println(stc.head)
 		stc.printHead()
 		fmt.Print("\n")
 	}
@@ -32,4 +33,47 @@ func main() {
 	fmt.Println()
 	fmt.Print("capacity -> ")
 	fmt.Println(stc.capacity)
+
+
+	// dequeue check
+	var dq Dequeue
+	fmt.Print("\n\ncapacity -> ")
+	fmt.Println(dq.capacity)
+	fmt.Println("\nVALUE | ELEMENT ADDR | PRIV ELEMENT ADDR | NEXT ELEMENT ADDR")
+	fmt.Println()
+
+	for i := 0; i < 16; i++ {
+		if i % 2 == 0 {
+			dq.PushUp(i)
+			dq.printHead()
+			fmt.Println()
+		} else {
+			dq.PushDown(i)
+			dq.printTail()
+			fmt.Println()
+		}
+	}
+	fmt.Print("dequeue head - > ")
+	dq.printHead()
+	fmt.Println()
+	fmt.Print("dequeue tail - > ")
+	dq.printTail()
+	fmt.Println()
+	fmt.Print("capacity -> ")
+	fmt.Println(dq.capacity)
+
+	dq.PopUp()
+	dq.PopDown()
+	dq.PopUp()
+	dq.PopDown()
+	fmt.Println()
+
+	fmt.Print("dequeue head (after dequeue.PopUp two times and dequeue.PopDown two times called...) - > ")
+	dq.printHead()
+	fmt.Println()
+	fmt.Print("dequeue tail (after dequeue.PopUp two times and dequeue.PopDown two times called...) - > ")
+	dq.printTail()
+	fmt.Println()
+	fmt.Print("capacity -> ")
+	fmt.Println(dq.capacity)
 }
