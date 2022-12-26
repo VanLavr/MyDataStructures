@@ -76,4 +76,5 @@ func main() {
 	fmt.Println()
 	fmt.Print("capacity -> ")
 	fmt.Println(dq.capacity)
+	fmt.Println("how actually dequeue is look like before deleting some elements:\nhead --> 14 12 10 8 6 4 2 0 1 3 5 7 9 11 13 15 <-- tail\nand how it looks like after deleting some elements:\nhead --> 10 8 6 4 2 0 1 3 5 7 9 11 <-- tail")
 }
